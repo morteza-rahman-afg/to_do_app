@@ -87,7 +87,7 @@ function Input({ onHandelItem }) {
 function Items({ items, onToggleItem, onDeleteItem }) {
   return (
     <div className="containerItem">
-      {items.map((items) => (
+      {items?.map((items) => (
         <Item
           item={items}
           key={items.id}
