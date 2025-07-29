@@ -22,7 +22,7 @@ export default function App() {
   // const [items, setItems] = useState([]);
   const [items, setItems] = useState(function () {
     const storedItems = localStorage.getItem("item");
-    return JSON.parse(storedItems);
+    return storedItems ? JSON.parse(storedItems) : [];
   });
 
   function handelItem(item) {
